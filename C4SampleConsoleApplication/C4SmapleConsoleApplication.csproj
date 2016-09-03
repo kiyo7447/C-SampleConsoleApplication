@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C＃ショートプログラミング.cs" />
+    <Compile Include="C＃逆引きレシピ.cs" />
     <Compile Include="Model\dbo\Account.cs" />
     <Compile Include="Model\dbo\Blob.cs" />
     <Compile Include="Model\dbo\BlobContainer.cs" />
