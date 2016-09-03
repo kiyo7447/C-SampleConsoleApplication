@@ -84,9 +84,48 @@ namespace ConsoleApplication
 				Greeting(s => { Console.WriteLine($"{s}さん"); });
 				Greeting(s => { Console.WriteLine($"{s}くん"); });
 			}
+			//************************************************
+			{
+				//パラメータの設定
+				TestOptionParam(amt:100, shop:"ok");
+			}
+			//************************************************
+			{
+				//Properties.Settings setting = new Properties.Settings();
+				//DataClasses1DataContext context = new DataClasses1DataContext(setting.WAStorageEmulatorDb30ConnectionString);
 
+				//var c = context.Account.Count();
+				//Console.WriteLine("Account Count:" + c);
+
+			}
+			{ 
+				var model = new Model1();
+
+				//model.Database.Log = p => Console.WriteLine(p);
+
+				Console.WriteLine("Account Count:" + model.Accounts.Count());
+
+			}
+
+			{
+				//即興で連番を作成してチェックする。（C# Interactiveでチェック可能）
+				//http://cheesememo.blog39.fc2.com/blog-entry-721.html
+				Enumerable.Range(0, 100).All(i => { Console.WriteLine($"{(i / 5) + 1}");return true;});
+
+			}
 
 			Console.ReadLine();
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="shop">店舗コード（空(null)の場合は担当店舗）</param>
+		/// <param name="amt"></param>
+		/// <param name="age"></param>
+		static void TestOptionParam(string shop = null, int amt = 0, int age = 0)
+		{
+
 		}
 
 		static void Greeting(Action<string> action)
