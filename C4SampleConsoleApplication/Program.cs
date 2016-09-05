@@ -114,6 +114,10 @@ namespace ConsoleApplication
 
 			}
 
+			{
+				//実行する。
+				C_逆引きレシピ.Run();
+			}
 			Console.ReadLine();
 		}
 
